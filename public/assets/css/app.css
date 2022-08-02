@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.courses .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.courses__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.courses__settings-btn {
+    font-size: 28px;
+    cursor: pointer;
+}
+.courses__subtitle {
+    margin: 0 0 25px 0;
+    font-size: 18px;
+}
+.courses-settings {
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+.courses-settings__item {
+    margin-bottom: 15px;
+}
+.course-settings__input {
+    width: 0;
+    height: 0;
+}
+.course-settings__input:checked + .course-settings__label {
+    border-color: #1186ea;
+    cursor: default;
+}
+.settings-label--active {
+    border-color: #1186ea;
+    cursor: default;
+}
+.course-settings__input:checked {
+    cursor: default;
+}
+.course-settings__label {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #e1e1e1;
+    cursor: pointer;
+    color: #3a3a3a;
+}
+.courses-table {
+    width: 100%;
+}
+.courses-table__row {
+    border-bottom: 1px solid #dedede;
+}
+.courses-table__cell {
+    padding: 10px 0;
+}
+.down-arrow {
+    stroke: red;
+}
+.up-arrow {
+    stroke: #24ce4b;
+}
+.success-text {
+    color: #24ce4b;
+}
+.danger-text {
+    color: red;
+}
+
+.courses-modal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    animation: modal-view .2s linear forwards;
+}
+@keyframes modal-view {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.courses-modal .container {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 8px;
+}
+.modal-settings {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.modal-settings__title {
+    margin-bottom: 20px;
+}
+.modal-settings__item {
+}
+.courses-modal__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+#custom-alert-message {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
